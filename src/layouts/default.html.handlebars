@@ -44,7 +44,7 @@
             </div>
             <!-- END markup for Preference Editor -->
 
-            <header class="row doc-base-start-header doc-base-start-header">
+            <header class="row doc-base-start-header">
                 <div class="doc-base-start-logo small-12 medium-5 column">
                     <a class="doc-base-start-logoText" href="{{{getRelativeUrl '/index.html' document.url}}}" title="Doc Base">Doc Base</a>
                 </div>
@@ -114,18 +114,6 @@
 
             <script type="text/javascript">
                 docBase.init("{{{getRelativeUrl '/./' document.url}}}");
-
-                // This code should be refactored into DocBase.js
-                // Also this function should be called each time the hideShow button is pressed since the height changes.
-                $(document).ready(function(){
-                    var sideHeight = $("#side").outerHeight();
-                    var contentHeight = $("#content").outerHeight();
-                    if (sideHeight > contentHeight) {
-                        $("#content").outerHeight(sideHeight);
-                    } else {
-                        $("#side").outerHeight(contentHeight);
-                    }
-                });
             </script>
         </div> <!-- end container -->
 
